@@ -2,9 +2,12 @@ package com.in.microservices.currencyconvertservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
-@EnableFeignCients("com.in.microservices.currencyconvertservice")
+@EnableFeignClients("com.in.microservices.currencyconvertservice")
+@EnableDiscoveryClient
 public class CurrencyConvertServiceApplication {
 
 	public static void main(String[] args) {
